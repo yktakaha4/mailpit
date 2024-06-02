@@ -6,7 +6,8 @@
     "build": "MINIFY=true node esbuild.config.mjs",
     "watch": "WATCH=true node esbuild.config.mjs",
     "package": "MINIFY=true node esbuild.config.mjs",
-    "update-caniemail": "wget -O utils/html-check/caniemail-data.json https://www.caniemail.com/api/data.json"
+    "update-caniemail": "wget -O utils/html-check/caniemail-data.json https://www.caniemail.com/api/data.json",
+    "test": "VITE_CJS_IGNORE_WARNING=true vitest"
   },
   "dependencies": {
     "axios": "^1.2.1",
@@ -28,9 +29,13 @@
     "@popperjs/core": "^2.11.5",
     "@types/bootstrap": "^5.2.7",
     "@types/tinycon": "^0.6.3",
+    "@vitejs/plugin-vue": "^5.0.5",
     "@vue/compiler-sfc": "^3.2.37",
+    "@vue/test-utils": "^2.4.6",
     "esbuild": "^0.21.3",
     "esbuild-plugin-vue-next": "^0.1.4",
-    "esbuild-sass-plugin": "^3.0.0"
+    "esbuild-sass-plugin": "^3.0.0",
+    "happy-dom": "^14.12.0",
+    "vitest": "^1.6.0"
   }
 }
